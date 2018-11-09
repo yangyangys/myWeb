@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6,div{ margin:0; padding:0}
+body{ font-size:12px; line-height:1.7em; color:#666;}
+ul{ list-style:none}
+img{ border:none}
+a{ text-decoration:none; color:#666;}
+.fl{ float:left}
+.fr{ float:right}
+.clear{ clear:both; overflow:hidden; height:0}
+.center{ width:1000px; margin:0 auto;}
+
+.clearfix:after{
+   content:".";/*加一段内容*/
+   display:block;/*让生成的元素以块级元素显示，占满剩余空间*/
+   height:0;/*避免生成的内容破坏原有布局高度*/
+   clear:both;/*清除浮动*/
+   visibility:hidden;/*让生成的内容不可见*/
+  }
+ .clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+
+ /*header*/
+ header{width: 100%; height: 170px;}
+ header .top{width: 100%;height: 55px;background: #AAABA3;}
+ header .top li{height: 55px;line-height: 55px;}
+ header .top ul li:first-child{width: 280px;color: #fff;font-size: 16px;}
+ header .top ul li:nth-of-type(2){width:180px;background: url(../images/phone.png) left center no-repeat;text-indent: 30px; }
+ header .top ul li:last-child{width:180px;background: url(../images/email.png) left center no-repeat;text-indent: 30px;}
+ /*nav*/
+ header nav{width: 100%;height: 110px;}
+ header nav .logo{padding-top: 20px;}
+ header nav .nav{width: 600px;height: 110px;float: right;}
+ header nav .nav ul li{float: left;}
+ header nav .nav ul li a{display: block;width: 90px;height: 90px;font-size: 14px;font-family: "宋体";color:#000;text-align: center;line-height: 100px;}
+ header nav .nav ul li:first-child a{background: url(../images/nav-bg.png) no-repeat;}
+ header nav .nav ul li:hover a{background: url(../images/nav-bg.png) no-repeat;}
+ /*banner*/
+ #banner{height: 690px;background: url(../images/banner.jpg);}
+
+
+ /*main*/
+ main{font-family: "宋体";}
+ main .center div:first-child{width: 100%;height: 120px;padding-top:40px;text-align: center;}
+ main .center div:first-child h3{font-size: 30px;}
+ main .center div:first-child p{padding-top:30px;font-size: 15px;line-height: 30px;}
+ main .center .con{width: 100%;height: 1000px;margin-top: 10px;}
+ main .center .con .title{width: 100%;height: 130px;font-size:30px;line-height: 130px;text-align: center;}
+ main .center .con ul{width: 100%;height: 350px;}
+ main .center .con ul li{width: 400px;float: left;margin-left: 35px;}
+ main .center .con ul li:first-child{background: url(../images/sprite.png) no-repeat left center;padding-left: 40px;}
+ main .center .con ul li:last-child{background: url(../images/sprite.png) no-repeat right center;padding-right: 40px;}
+ main .center .con ul li a{display:block;position: relative;}
+ main .center .con ul li a p span{display:block;font-size: 20px;line-height: 36px;}
+ main .center .con ul li a p{display:none;font-size: 15px;color: #EDB578;position: absolute;bottom:10px;left: 10px;}
+ main .center .con ul li a:hover img{transform: scale(1.1);transition: all 0.5s;}
+ main .center .con ul li a:hover p{display: block;}
+
+/*footer*/
+ footer{width:100%;height:300px;background: #F5F6F7;position:relative;z-index:100;float:left;}
+ footer ul{width: 100%;height: 280px;}
+ footer ul li{width:250px;height:172px; float:left;border-left:1px solid #434343;margin:52px 0px 0 -2px;position:relative;}
+ footer ul li h1{text-align:center;color:#000;font-size:24px;line-height:30px;}
+ footer ul li h2{text-align:center;color:#757575;font-size:15px;line-height:30px;font-family:'SimSun','宋体','黑体';}
+ footer ul li p{text-align:center;color:#757575;font-size:13px;line-height:20px;width:223px;margin:10px auto;}
+ footer ul li .More{text-align:center;font-size:14px;line-height:20px;width:100%;display:block;}
+ footer ul li .More a{color:#8f6d49;}
+ footer ul li .More img{vertical-align:middle;margin-top:-6px;margin-right:12px;}
+ footer ul li .erweima{width:80px;height:80px;position:absolute;bottom:-25px;right:82px;display:none;cursor:pointer;}
+ footer ul li .erweima img{width:80px;}
+ footer ul li:last-child{border-right: 1px solid #434343; margin-right: -1px;}
+ footer ul li:last-child .more a{margin-right: 18px;}
+ footer .foot{width: 100%;height: 50px;border-top:1px solid #AAABA3;margin-top:-30px; }
+ footer span{font-family:'Microsoft YaHei';color:#898989;display: block;height: 20px;margin-left: 450px;line-height: 20px;}
+ footer span:last-child{margin-left: 500px;}
+
+
+
+
+ 
+
+
+
+
+
