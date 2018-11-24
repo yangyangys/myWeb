@@ -1,0 +1,41 @@
+{
+    "statusCode":"000000",
+    "desc":"请求成功",
+    "result":[
+        {
+            "id": 1002,
+            "title": "糖醋菠萝排骨",
+            "tags": "一小时，酸甜口味",
+            "intro": "糖醋菠萝排骨是广东省传统的名菜，属于粤菜系。味道鲜美，老少皆宜，是当下人们喜爱的菜肴之一",
+            "ingredients": "排骨：300g;菠萝：半个;姜：2片",
+            "burden": "糖：1汤匙;醋：半汤匙;盐：半茶匙;料酒:1汤匙;生粉：1茶匙;番茄酱：2汤匙",
+            "albums": "https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268/sign=1c132caa59ee3d6d22c680cd7b166d41/359b033b5bb5c9ea58e03ceed539b6003af3b3af.jpg",
+            "steps": [
+                {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357227690343.jpg",
+                "step": "step1:小排用清水泡清血水后洗净捞起"
+                },
+            {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357227787441.jpg",
+                "step": "step2:准备糖水菠萝和糖醋汁（4汤匙生抽，2汤匙香醋 2汤匙白糖 4汤匙清水和1汤匙生粉拌匀）"
+            },
+            {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357227857143.jpg",
+                "step": "step3:排骨用4克盐，15毫升料酒和2汤匙生粉抓匀腌制4小时"
+            },
+            {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357228053505.jpg",
+                "step": "step4:在锅中烧热油，放入排骨，炸制金黄"
+            },
+            {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357228136631.jpg",
+                "step": "step5:倒出全部油把排骨回锅倒入料酒和糖醋汁"
+            },
+            {
+                "img": "https://s1.st.meishij.net/rs/115/102/588115/n588115_142357228223785.jpg",
+                "step": "step6:放入菠萝块翻炒均匀即可。"
+            }
+        ]
+        }
+    ]
+}

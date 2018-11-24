@@ -1,0 +1,35 @@
+{
+    "statusCode":"000000",
+    "desc":"请求成功",
+    "result":[
+        {
+            "id": 433079,
+            "title": "西红柿酸奶",
+            "tags": "促进食欲;减肥;懒人食谱;消暑食谱;美容养颜;",
+            "intro": "星期六的早上起来，打开冰箱，冰箱里能吃的都没有了，就剩下一点豇豆，芹菜，土豆，单独炒不够，于是我就想到了新疆的大杂烩，刚好一盘子。在新疆大杂烩，拌面，拌米饭都不错，",
+            "ingredients": "酸奶:400g;西红柿:200g;",
+            "burden": "白糖:20g",
+            "albums": "http://imgs.haoservice.com/CaiPu/pic/recipe/l/b7/9b/433079_377373.jpg",
+            "steps": [{
+                "img": "http://i1.chuimg.com/bbce814438b444e8b44459f0f5a24d63_2148w_1698h.jpg@2o_50sh_1pr_1l_300w_90q_1wh",
+                "step": "step1:准备原味酸奶和西红柿，用量没有特别的要求，看自己的口味和胃口了"
+            },
+            {
+                "img": "http://i2.chuimg.com/fd3a1929562341eeb2b46201956e2d45_2304w_3072h.jpg?imageView2/2/w/300/interlace/1/q/90",
+                "step": "step2:西红柿切成小块，放入搅拌杯或料理机中"
+            },
+            {
+                "img": "http://i2.chuimg.com/b7e6630e589e44b29008a117953fd463_2304w_3072h.jpg?imageView2/2/w/300/interlace/1/q/90",
+                "step": "step3:倒入酸奶用搅拌器搅拌均匀（或用料理机）"
+            },
+            {
+                "img": "http://i2.chuimg.com/8adef243f0db45f1a7b3dfc527a1ae87_2304w_3072h.jpg?imageView2/2/w/300/interlace/1/q/90",
+                "step": "step4:西红柿完全被打碎就可以了"
+            },
+            {
+                "img": "http://i2.chuimg.com/374ddcbec95a4d4c85e810fe13b6a227_2448w_2448h.jpg?imageView2/2/w/300/interlace/1/q/90",
+                "step": "step5:来一杯酸甜可口，清清爽爽的西红柿酸奶吧"
+            }]
+        }
+    ]
+}
