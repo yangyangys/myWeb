@@ -1,0 +1,62 @@
+/* footer icon */
+footer .icon{width: 100%;background: #f8f8f8;padding:35px 0;border-bottom:1px solid #ededed;text-align: center;}
+footer .icon a{display: block;font-size: 14px;color: #000;text-align: center;width: 150px;float: left;}
+footer .icon a span{display: block;width: 50px;height: 50px;margin:0 auto 10px auto;}
+footer .icon a span.icon1{background: url(../images/footerIcon.png) 0 0 no-repeat;}
+footer .icon a span.icon2{background: url(../images/footerIcon.png) -50px 0 no-repeat;}
+footer .icon a span.icon3{background: url(../images/footerIcon.png) -100px 0 no-repeat;}
+footer .icon a span.icon4{background: url(../images/footerIcon.png) -150px 0 no-repeat;}
+footer .icon a span.icon5{background: url(../images/footerIcon.png) 0 -50px no-repeat;}
+footer .icon a span.icon6{background: url(../images/footerIcon.png) -50px -50px no-repeat;}
+footer .icon a span.icon7{background: url(../images/footerIcon.png) -100px -50px no-repeat;}
+footer .icon a span.icon8{background: url(../images/footerIcon.png) -150px -50px no-repeat;}
+
+/* footer help */
+footer .help{width:100%;background: #f8f8f8;padding:35px 0 54px;}
+footer .help .summary{width:240px;height: 164px; background: url(../images/footer.png) 0 -100px no-repeat;}
+footer .help .summary .s1{font-size: 14px;line-height: 19px;color: #000;}
+footer .help .summary .s2{font-size: 20px;margin:5px 0; color: #e62318;}
+footer .help .summary .s3{margin-bottom:30px; color: #999;}
+footer .help .summary .s3 span{ color: #e62318;}
+footer .help .summary .s4{margin-bottom: 10px;}
+footer .help .summary .s4 a,.s5 a {display:block; color: #e62318;border:1px solid #e62318;width: 106px;height: 24px;line-height: 24px;padding-left: 10px;text-align: center;position: relative;}
+footer .help .summary .s4 a span{display: block;width: 12px;height: 18px;line-height: 18px; background: url(../images/footer.png) -11px -265px no-repeat;overflow: hidden;position: absolute;left:3px;top:4px;}
+footer .help .summary .s5 a span{display: block;width: 10px;height: 13px;line-height: 13px; background: url(../images/footer.png) 0 -265px no-repeat;overflow: hidden;position: absolute;left:3px;top:6px;}
+/* footer help article */
+footer .help .article{width: 851px;float: right;} 
+footer .help .article dl{width: 151px;float: left;} 
+footer .help .article dl dt{color: #444;font-size: 14px;padding:3px 0 5px;} 
+footer .help .article dl dd a{display: block; color: #999;margin-top:9px;} 
+footer .help .article dl dd a:hover{color:#e62318;} 
+footer .help .article dl:last-child{width: 96px;} 
+footer .help .article dl:last-child img{width: 96px;height:96px;overflow: hidden;} 
+
+/* footer extend */
+footer .extend{width:100%;background: #1f1f1f;padding:21px 0 30px;}
+footer .extend ul#fLink{border-bottom:1px solid #2e2e2e;padding-bottom: 20px;margin-bottom:20px;}
+footer .extend ul#fLink li{height:20px;overflow: hidden;position: relative;}
+footer .extend ul#fLink li .switch{padding-right:25px;line-height: 20px;}
+footer .extend ul#fLink li span:first-child{color:#c9c9c9;margin-right:10px;}
+footer .extend ul li a{color:#9c9b9b;}
+footer .extend ul#fLink li a{margin-right: 16px;}
+footer .extend ul li a:hover{color:#e62318;}
+footer .extend ul#fLink li span:last-child{width:15px;height:13px;position: absolute;top:4px;right:0;}
+footer .extend ul#fLink li span#btn{background: url(../images/footer.png) -23px -265px no-repeat;cursor: pointer;}
+
+footer .end{position: relative;}
+footer .end ul.msg{height: 40px;}
+footer .end ul.msg li{height: 20px;line-height:20px;}
+footer .end ul.msg li{height: 20px;line-height:20px;}
+footer .end ul.credit{height: 40px;position: absolute;right:0;top:0;}
+footer .end ul.credit li{float: left;padding-left:15px;line-height: 40px;}
+footer .end ul.credit li span{display: inline-block;vertical-align: top;} 
+footer .end ul.credit li span:first-child{height: 40px;width:27px;margin:9px 0 0 5px;}
+footer .end ul.credit li span:last-child{width:50px;line-height:20px;}
+footer .end ul.credit li span.icon1{height:22px; background: url(../images/credit.png) 0 0 no-repeat;margin-top: 12px;}
+footer .end ul.credit li span.word{line-height: 40px;}
+footer .end ul.credit li span.icon2{height:26px; background: url(../images/credit.png) 0 -69px no-repeat;}
+footer .end ul.credit li span.icon3{height:21px; background: url(../images/credit.png) 0 -47px no-repeat;}
+footer .end ul.credit li span.icon4{height:25px; background: url(../images/credit.png) 0 -22px no-repeat;}
+
+
+

@@ -1,0 +1,39 @@
+/* header */
+
+/* header hnav */
+header #hNav .navcon{height:30px; line-height: 30px;background: #f8f8f8;}
+header #hNav .navcon .center{display: flex;justify-content: space-between;}
+header #hNav #login{width:240px;display: flex;justify-content: space-between;}
+header #hNav #login .location span{display: inline-block;}
+header #hNav #login .location span.limg{ width:11px; height:14px; background: url(../images/nav.png) 0 -38px no-repeat; margin: 7px 5px 0 0;}
+header #hNav #login .location span.place{font-weight: 800;color:#E93A30;vertical-align: top;}
+header #hNav #login .location a.city{vertical-align:top;padding: 0 5px; }
+header #hNav #login .sign{width:110px; display: flex;justify-content: space-between;}
+
+header #hNav #custom{width:640px; display: flex;justify-content: space-evenly;position: relative;}
+header #hNav #custom li span.car{display: inline-block; width:17px;height: 14px; background: url(../images/nav.png) 0 -53px no-repeat;overflow: hidden;vertical-align: -2px;margin-right:2px;}
+header #hNav #custom li span.arrow{display: inline-block;width:7px;height: 4px; background: url(../images/nav.png) 0 0 no-repeat;vertical-align: 3px;margin-left:5px;}
+header #hNav #custom li span.tel{color:#E93A30;}
+header #hNav #custom li:hover span.arrow{background: url(../images/nav.png) 0 -5px no-repeat;}
+header #hNav a:hover{color:#E93A30;}
+header #hNav #custom li .list{width: 80px;overflow: hidden;background: #fff; border:1px solid #eaeaea;border-top:none;display: none;line-height: 22px;margin-left:-2px;position: absolute;}
+header #hNav #custom li:nth-of-type(3) .list{width: 178px;text-align: center;}
+header #hNav #custom li:nth-of-type(3) .list img{overflow: hidden;}
+header #hNav #custom li:nth-of-type(3) .list .erweima img{width:132px;height: 132px;}
+header #hNav #custom li .list li{text-align: center;}
+header #hNav #custom li:hover .list{display: block;z-index:100;}
+
+/* header #hNav .search{height: 112px;display: flex;justify-content: space-around;}
+header #hNav .search .logo{margin:26px 12px 0;}
+header #hNav .search .form{width:608px;height: 38px; background: #f0f0f0;border-radius: 4px;border:1px solid #f0f0f0;margin-top:30px;}
+header #hNav .search .form input{width:542px;height:20px; border:0 none;background: #f0f0f0;color:#000;font-size:14px;line-height:20px;;padding:9px 16px;outline: 0;}
+header #hNav .search .form a.btn{display: inline-block;width:22px;height: 22px;background: url(../images/index.png) -60px -251px no-repeat;margin:8px 6px 0 0;}
+header #hNav .search .form .keywords{width:400px;font-size:14px;display: flex;justify-content: space-between;}
+header #hNav .search .form .keywords a{display: block;margin-right:5px;}
+header #hNav .search .redpack{margin:5px 12px 0;} */
+
+header nav{height: 36px;}
+header nav h2{width: 200px;height: 36px;line-height: 36px;text-align: center;background: #e62318;color:#fff;font:15px/36px '微软雅黑';}
+header nav ul{width:800px;display: flex;justify-content: space-around;font:16px/36px '微软雅黑';}
+header nav ul li a{color:#333;}
+header nav ul li:hover a{color:#e62318;}

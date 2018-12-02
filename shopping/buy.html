@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <script src="js/vue.js"></script>
+        
+</head>
+<body>
+    <header>
+        <div id="hNav">
+            <div class="navcon">
+                <div class="center">
+                    <ul id="login">
+                        <li class="sign">
+                            <a href="#">这里是用户名</a>
+                            <a href="#" style="color:#e62318;">[退出]</a>
+                        </li>
+                    </ul>
+                    <ul id="custom">
+                        <li>
+                            <a href="#">我的美乐乐</a><span class="arrow"></span>
+                            <ul class="list">
+                                <li><a href="#">我的订单</a></li>
+                                <li><a href="#">我的金币</a></li>
+                                <li><a href="#">我的红包</a></li>
+                                <li><a href="#">我的收藏</a></li>
+                                <li><a href="#">我的评价</a></li>
+                                <li><a href="#">申请保价</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="car"></span>
+                            <a href="#">购物车</a><span class="arrow"></span>
+                        </li>
+                        <li>
+                            <a href="#">关注美乐乐</a><span class="arrow"></span>
+                            <ul class="list">
+                                <li class="erweima"><img src="images/erweima.jpg" alt=""></li>
+                                <li>扫码关注</li>
+                                <li class="tip"><img src="images/gunzhu.jpg" alt=""></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">帮助中心</a><span class="arrow"></span>
+                            <ul class="list">
+                                <li><a href="#">购买流程</a></li>
+                                <li><a href="#">在线帮助</a></li>
+                                <li><a href="#">企业采购</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">收藏本站</a></li>
+                        <li>
+                            全国热线: <span class="tel">400 00098666</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search clearfix">
+                    <div class="logo"><img src="images/logo.png" alt=""></div>
+                    <div class="form">
+                        <form class=" clearfix">
+                            <input type="text">
+                            <a href="#" class="btn fr">搜索</a>
+                        </form>
+                        <div class="keywords">
+                            <a href="#">电视柜/茶几两件八折</a>
+                            <a href="#">床</a>
+                            <a href="#">沙发</a>
+                            <a href="#">餐桌椅</a>
+                            <a href="#">实木床</a>
+                            <a href="#">灯饰</a>
+                            <a href="#">转角沙发</a>
+                        </div>
+                    </div>
+            </div> 
+        </div>
+    </header>
+
+    <main>
+        <div class="center clearfix" id="app">
+            <form action="">
+                <div class="title clearfix">
+                    <ul>
+                        <li>全部商品<span>3</span></li>
+                        <li>降价商品<span>0</span></li>
+                    </ul>
+                </div>
+                <div class="table">
+                    <ul class="table-title clearfix">
+                        <li><span><input type="checkbox"></span> </li>
+                        <li>全选</li>
+                        <li>商品</li>
+                        <li>单价</li>
+                        <li>数量</li>
+                        <li>金额</li>
+                        <li>操作</li>
+                    </ul>
+                    <div class="box clearfix">
+                        <div><span><input type="checkbox"></span></div>
+                        <div><span>美乐乐自营</span><button>客服</button></div>
+                    </div>
+                    <ul class="list clearfix">
+                        <li v-for="(product, index) in productList" :class="{red: product.isRed}" @click="select(product)" class="clearfix">
+                            <span class="delAll"><input type="checkbox" @click.stop="" v-model="checked" :value="index"></span> 
+                            <span class="product-img"><img :src="product.img" alt=""></span>
+                            <span class="product-name">{{index+1}}. {{product.name}}</span>
+                            <span class="product-price">{{product.price}}</span><span class="del" @click.stop="del(index)">删除</span> 
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="icon">
+            <div class="center clearfix">
+                <a href="#"><span class="icon1"></span>美乐乐O2O</a>
+                <a href="#"><span class="icon2"></span>全国体验馆</a>
+                <a href="#"><span class="icon3"></span>双重质检</a>
+                <a href="#"><span class="icon4"></span>售后无忧</a>
+                <a href="#"><span class="icon5"></span>原创设计</a>
+                <a href="#"><span class="icon6"></span>全球采购</a>
+                <a href="#"><span class="icon7"></span>万千口碑</a>
+                <a href="#"><span class="icon8"></span>团队优势</a>
+            </div>
+        </div>
+        <div class="extend">
+            <div class="center">
+                <ul id="fLink">
+                    <li>
+                        <div class="switch">
+                            <span>热门城市：</span>
+                            <a href="#">北京家具</a>
+                            <a href="#">上海家具</a>
+                            <a href="#">重庆家具</a>
+                            <a href="#">深圳家具</a>
+                            <a href="#">广州家具</a>
+                            <a href="#">成都家具</a>
+                            <a href="#">佛山家具</a>
+                            <a href="#">长沙家具</a>
+                            <a href="#">苏州家具</a>
+                            <a href="#">天津家具</a>
+                            <a href="#">福州家具</a>
+                            <a href="#">郑州家具</a>
+                            <a href="#">昆明家具</a>
+                            <a href="#">东莞家具</a>
+                            <a href="#">西安家具</a>
+                            <a href="#">济南家具</a>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="switch">
+                            <span>友情链接：</span>
+                            <a href="#">亿智蘑菇</a>
+                            <a href="#">湖北招考网</a>
+                            <a href="#">土巴兔装修网</a>
+                            <a href="#">西祠胡同</a>
+                            <a href="#">搜狗焦点家居</a>
+                            <a href="#">酷我音乐</a>
+                            <a href="#">西陆新闻</a>
+                            <a href="#">装修</a>
+                            <a href="#">当贝市场</a>
+                            <a href="#">女性</a>
+                            <a href="#">住哪网</a>
+                            <a href="#">中国时尚品牌网</a>
+                            <a href="#">中国建材采购网</a>
+                            <a href="#">七丽女性网</a>
+                            <a href="#">装修</a>
+                            <a href="#">糖豆广场舞</a>
+                            <a href="#">战略军事</a>
+                            <a href="#">得意生活</a>
+                            <a href="#">好豆菜谱</a>
+                            <a href="#">天堂图片网</a>
+                            <a href="#">卡车之家</a>
+                            <a href="#">千里马招标网</a>
+                            <a href="#">中大网校</a>
+                            <a href="#">美食杰</a>
+                            <a href="#">商界招商网</a>
+                            <a href="#">美乐乐</a>
+                            <a href="#">建材网</a>
+                            <a href="#">电商新闻</a>
+                            <span id="btn"></span> 
+                        </div>
+                    </li>
+                </ul>
+                <div class="end">
+                    <ul class="msg">
+                        <li>
+                            <a href="#">装修网</a> |
+                            <a href="#">家具图片</a> |
+                            <a href="#">家居资讯</a> |
+                            <a href="#">生活百科</a> |
+                            <a href="#">家私导购</a> |
+                            <a href="#">品牌展厅</a> |
+                            <a href="#">装修论坛</a> |
+                            <a href="#">装修效果图</a> |
+                            <a href="#">客服中心</a> |
+                            <a href="#">网站地图</a> |
+                            <a href="#">友情链接</a> |
+                            <a href="#">更多</a>
+                        </li>
+                        <li>
+                            <span>© 2005-2018 美乐乐  天津美维信息技术有限公司 版权所有，并保留所有权利。</span>
+                            <a href="#">ICP备案证书号：粤ICP备08008334号</a>
+                        </li>
+                    </ul>
+                    <ul class="credit">
+                        <li>
+                            <a href="#">
+                                <span class="icon1"></span>
+                                <span class="word">诚信网站</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon2"></span>
+                                <span>认证联盟品牌官网</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon3"></span>
+                                <span>可信网站信用评价</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon4"></span>
+                                <span>经营网站备案信息</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+ <script>
+ new Vue({
+     el: '#app',
+     data: {
+         productList: [
+             {
+                 'name': 'HuaWei nova 3',
+                 'price': 2900,
+                 'isRed': false,
+             },
+             {
+                 'name': '南极棉服',
+                 'price': 200,
+                 'isRed': false,
+             },
+             {
+                 'name': '北极熊帽子',
+                 'price': 400,
+                 'isRed': false,
+             },
+             {
+                 'name': '海拉尔羊肉',
+                 'price': 80,
+                 'isRed': false,
+             },
+             {
+                 'name': '万圣节披萨',
+                 'price': 180,
+                 'isRed': false,
+             },
+         ],
+          total: 0, //总价
+          name: '', //添加的商品名称
+          price: '',//添加商品的价格
+          keyword: '', //搜索商品的关键字
+          checked: [], //存入要删除商品的index
+     },
+     methods: {
+         select(product){            
+            /*  if(product.isRed==false){//方法一:
+                product.isRed = true;
+             }else{
+                product.isRed = false;
+             } */
+            // console.log(product.price);
+             product.isRed = !product.isRed; //方法二
+            
+            /* if(product.isRed){//求总价: 方法一
+                this.total += parseInt(product.price);
+            }else{
+                this.total -= parseInt(product.price);
+            } */
+         },
+         sum(){
+             let sum = 0;
+             this.productList.forEach(function(val, index){
+                 if(val.isRed){
+                     sum += parseInt(val.price);
+                     console.log(index, val.name, val.price, val.isRed);
+                 }                 
+             })
+             return sum
+         },
+         add(){
+             this.productList.push({
+                 name: this.name,
+                 price: this.price,
+                 'isRed': false,
+             });
+             this.name = '',
+             this.price = 0,
+             console.log(this.productList);
+         },
+         search(){
+             let arr=this.productList.filter((val, index)=>{
+                // console.log(val.name.includes(this.keyword));
+                 if(val.name.includes(this.keyword)){
+                    // console.log(val.name);
+                     return val;
+                 }
+             });
+             this.productList = arr;
+            //console.log(this.keyword);
+         },
+         del(index){
+             this.productList.splice(index,1);//splice(删除位置,删除数量)
+             //console.log(this.productList[index].name);
+         },
+         delAll(){
+             //console.log(this.checked);
+             let arr = this.productList.filter((val, index)=>{
+                 /* if(this.checked.includes(index)){
+                    console.log(index, val.name);
+                 } */
+              
+                 if(!this.checked.includes(index)){
+                    console.log(index, val.name);
+                    return val;  
+                 }                               
+             });
+             this.productList = arr;
+             this.checked = []; //清除选中标记
+         }
+     }
+ });
+ </script>
+
+</body>
+</html>
