@@ -107,16 +107,31 @@
                         <div><span>美乐乐自营</span><button>客服</button></div>
                     </div>
                     <ul class="list clearfix">
-                        <li v-for="(product, index) in productList" :class="{red: product.isRed}" @click="select(product)" class="clearfix">
-                            <span class="delAll"><input type="checkbox" @click.stop="" v-model="checked" :value="index"></span> 
+                        <li v-for="(product,index) in productList" :class="{red: product.isRed}" class="clearfix">
+                            <span class="delAll"><input type="checkbox" @click.stop="" v-model="checked" :value="index" @click="select(product)"></span> 
                             <span class="product-img"><img :src="product.img" alt=""></span>
-                            <span class="product-name">{{index+1}}. {{product.name}}</span>
-                            <span class="product-price">{{product.price}}</span><span class="del" @click.stop="del(index)">删除</span> 
+                            <span class="product-title" v-cloak>{{product.title}}</span>
+                            <span class="product-name" v-cloak>{{product.name}}</span>
+                            <span class="product-price" v-cloak>￥{{product.price}}/套</span>
+                            <span class="product-count">
+                                <div @click="add(index)">+</div>
+                                <div v-cloak>{{product.count}}</div>
+                                <div @click="reduce(index)">-</div>
+                            </span>
+                            <span class="price" v-cloak>￥{{product.tprice}}</span>
+                            <span class="del" @click.stop="del(index)">删除</span> 
                         </li>
                     </ul>
                 </div>
             </form>
-        </div>
+            <div id="total">
+                <span @click="delAll()" class="fl">删除选中产品</span>
+                <div class="fr">
+                    <span class="fl">总价:￥{{sum()}}</span>
+                    <button>去下单</button>
+                </div>
+
+            </div>
     </main>
     <footer>
         <div class="icon">
@@ -250,103 +265,88 @@
      data: {
          productList: [
              {
-                 'name': 'HuaWei nova 3',
-                 'price': 2900,
-                 'isRed': false,
+                'img': 'images/buylistsmall.jpg',
+                'title': '经典蓝色 小户型专享 可拆洗时尚储物多功能收纳沙发床 百变造型 上等棉麻印花 右转角沙发（1+3+右贵妃）',
+                'name' : '类型：右转角沙发（1+3+右贵妃）',
+                'price': 3899.00,
+                'tprice':3899.00,
+                'count':1,
+                'isRed': false,
              },
              {
-                 'name': '南极棉服',
-                 'price': 200,
-                 'isRed': false,
+                'img': 'images/buylistsmall1.jpg',
+                'title': '简约大气 百搭小清新  北欧时尚 小户型客厅家具组合（1+2+3）沙发 维纳恩系列',
+                'name' : '类型：（1+2+3）沙发',
+                'price': 9999.00,
+                'tprice':9999.00,
+                'count':1,
+                'isRed': false,
              },
              {
-                 'name': '北极熊帽子',
-                 'price': 400,
-                 'isRed': false,
+                'img': 'images/buylistsmall2.jpg',
+                'title': '欧式简约 上等白蜡木框架舒适棉麻布艺沙发 四人位沙发套装(4人位+脚踏)',
+                'name' : '类型：四人位沙发套装',
+                'price': 6499.00,
+                'tprice':6499.00,
+                'count':1,
+                'isRed': false,
              },
              {
-                 'name': '海拉尔羊肉',
-                 'price': 80,
-                 'isRed': false,
-             },
-             {
-                 'name': '万圣节披萨',
-                 'price': 180,
-                 'isRed': false,
+                'img': 'images/buylistsmall3.jpg',
+                'title': '书桌下柜左右通用 优质橡胶木 板木结合 多功能实用儿童转角书桌（上架+下座）',
+                'name' : '类型：（上架+下座）书桌',
+                'price': 9999.00,
+                'tprice':9999.00,
+                'count':1,
+                'isRed': false,
              },
          ],
           total: 0, //总价
-          name: '', //添加的商品名称
+          title: '', //添加的商品名称
           price: '',//添加商品的价格
           keyword: '', //搜索商品的关键字
           checked: [], //存入要删除商品的index
+          img:'',
+          count:1,
+          tprice:9999.00,
      },
      methods: {
          select(product){            
-            /*  if(product.isRed==false){//方法一:
-                product.isRed = true;
-             }else{
-                product.isRed = false;
-             } */
-            // console.log(product.price);
-             product.isRed = !product.isRed; //方法二
-            
-            /* if(product.isRed){//求总价: 方法一
-                this.total += parseInt(product.price);
-            }else{
-                this.total -= parseInt(product.price);
-            } */
+             product.isRed = !product.isRed; 
+         },
+         add(index){
+            this.productList[index].count++;
+         },
+         reduce(index){
+				if(this.productList[index].count == 1){
+					this.productList[index].count;
+					
+				}else{
+					this.productList[index].count--;
+				}
+			    
+		},
+        del(index){
+             this.productList.splice(index,1);
+         },
+        delAll(){
+            let arr = this.productList.filter((val, index)=>{
+                if(!this.checked.includes(index)){
+                    return val;  
+                 }                               
+             });
+             this.productList = arr;
+             this.checked = []; 
          },
          sum(){
              let sum = 0;
              this.productList.forEach(function(val, index){
                  if(val.isRed){
                      sum += parseInt(val.price);
-                     console.log(index, val.name, val.price, val.isRed);
                  }                 
              })
              return sum
          },
-         add(){
-             this.productList.push({
-                 name: this.name,
-                 price: this.price,
-                 'isRed': false,
-             });
-             this.name = '',
-             this.price = 0,
-             console.log(this.productList);
-         },
-         search(){
-             let arr=this.productList.filter((val, index)=>{
-                // console.log(val.name.includes(this.keyword));
-                 if(val.name.includes(this.keyword)){
-                    // console.log(val.name);
-                     return val;
-                 }
-             });
-             this.productList = arr;
-            //console.log(this.keyword);
-         },
-         del(index){
-             this.productList.splice(index,1);//splice(删除位置,删除数量)
-             //console.log(this.productList[index].name);
-         },
-         delAll(){
-             //console.log(this.checked);
-             let arr = this.productList.filter((val, index)=>{
-                 /* if(this.checked.includes(index)){
-                    console.log(index, val.name);
-                 } */
-              
-                 if(!this.checked.includes(index)){
-                    console.log(index, val.name);
-                    return val;  
-                 }                               
-             });
-             this.productList = arr;
-             this.checked = []; //清除选中标记
-         }
      }
  });
  </script>
