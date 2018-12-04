@@ -130,7 +130,8 @@
             <div id="total">
                 <span @click="delAll()" class="fl">删除选中产品</span>
                 <div class="fr">
-                    <span class="fl">总价:￥{{sum()}}</span>
+                    <span class="num fl">共{{num()}}件商品</span>
+                    <span class="sum fl">总价:￥{{sum()}}</span>
                     <button>去下单</button>
                 </div>
             </div>
@@ -311,7 +312,7 @@
           keyword: '', //搜索商品的关键字
           checked: [], //存入要删除商品的index
           img:'',
-          count:1,
+          count:0,
           tprice:9999.00,
      },
      methods: {
@@ -346,11 +347,20 @@
              let sum = 0;
              this.productList.forEach(function(val, index){
                  if(val.isRed){
-                     sum += parseInt(val.price);
+                     sum += parseInt(val.price)*(val.count);
                  }                 
              })
              return sum
          },
+         num(){
+             let num=0;
+            this.productList.forEach(function(val, index){
+                 if(val.isRed){
+                     num += parseInt(val.count);
+                 }                 
+             })
+             return num;
+         }
      }
  });
  </script>
