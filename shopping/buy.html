@@ -106,6 +106,9 @@
                         <div><span><input type="checkbox"></span></div>
                         <div><span>美乐乐自营</span><button>客服</button></div>
                     </div>
+                    <div id="none" v-if="productList.length == 0">
+                            购物车空空如也......
+                    </div>
                     <ul class="list clearfix">
                         <li v-for="(product,index) in productList" :class="{red: product.isRed}" class="clearfix">
                             <span class="delAll"><input type="checkbox" @click.stop="" v-model="checked" :value="index" @click="select(product)"></span> 
@@ -130,8 +133,9 @@
                     <span class="fl">总价:￥{{sum()}}</span>
                     <button>去下单</button>
                 </div>
-
             </div>
+
+        </div>
     </main>
     <footer>
         <div class="icon">
