@@ -1,4 +1,4 @@
-window.onload = function () {
+
     (function () {
         var oBanner = document.getElementById("banner");
         var oImgs = document.getElementById("banner").getElementsByTagName("img");
@@ -14,4 +14,3 @@ window.onload = function () {
         }
     }
     )();
-}
