@@ -121,7 +121,7 @@
                                 <div v-cloak>{{product.count}}</div>
                                 <div @click="reduce(index)">-</div>
                             </span>
-                            <span class="price" v-cloak>￥{{product.tprice}}</span>
+                            <span class="price" v-cloak>￥{{unit(index)}}</span>
                             <span class="del" @click.stop="del(index)">删除</span> 
                         </li>
                     </ul>
@@ -274,7 +274,6 @@
                 'title': '经典蓝色 小户型专享 可拆洗时尚储物多功能收纳沙发床 百变造型 上等棉麻印花 右转角沙发（1+3+右贵妃）',
                 'name' : '类型：右转角沙发（1+3+右贵妃）',
                 'price': 3899.00,
-                'tprice':3899.00,
                 'count':1,
                 'isRed': false,
              },
@@ -283,7 +282,6 @@
                 'title': '简约大气 百搭小清新  北欧时尚 小户型客厅家具组合（1+2+3）沙发 维纳恩系列',
                 'name' : '类型：（1+2+3）沙发',
                 'price': 9999.00,
-                'tprice':9999.00,
                 'count':1,
                 'isRed': false,
              },
@@ -292,7 +290,6 @@
                 'title': '欧式简约 上等白蜡木框架舒适棉麻布艺沙发 四人位沙发套装(4人位+脚踏)',
                 'name' : '类型：四人位沙发套装',
                 'price': 6499.00,
-                'tprice':6499.00,
                 'count':1,
                 'isRed': false,
              },
@@ -301,20 +298,13 @@
                 'title': '书桌下柜左右通用 优质橡胶木 板木结合 多功能实用儿童转角书桌（上架+下座）',
                 'name' : '类型：（上架+下座）书桌',
                 'price': 9999.00,
-                'tprice':9999.00,
                 'count':1,
                 'isRed': false,
              },
          ],
-          total: 0, //总价
-          title: '', //添加的商品名称
-          price: '',//添加商品的价格
-          keyword: '', //搜索商品的关键字
-          checked: [], //存入要删除商品的index
-          img:'',
-          count:0,
-          tprice:9999.00,
-     },
+          checked: [], 
+          tprice: 0,
+        },
      methods: {
          select(product){            
              product.isRed = !product.isRed; 
@@ -331,6 +321,10 @@
 				}
 			    
 		},
+        unit(index){            
+            this.tprice = this.productList[index].price * this.productList[index].count;
+            return this.tprice;
+        },
         del(index){
              this.productList.splice(index,1);
          },
@@ -353,14 +347,15 @@
              return sum
          },
          num(){
-             let num=0;
+            let num=0;
             this.productList.forEach(function(val, index){
                  if(val.isRed){
                      num += parseInt(val.count);
                  }                 
              })
              return num;
-         }
+         },
+
      }
  });
  </script>
