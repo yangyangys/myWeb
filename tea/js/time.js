@@ -1,4 +1,4 @@
-
+window.onload=function(){
     (function(){
         setInterval(function(){
             var oTime=document.getElementById("time");
@@ -15,4 +15,4 @@
             oTime.innerHTML=year+"/"+month+"/"+day+" "+hour+":"+minute+":"+second;},1000);   
             }
 )();
-
+}
